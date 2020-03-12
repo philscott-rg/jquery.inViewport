@@ -81,7 +81,8 @@
 			};
 			
 			// On scroll, resize and load, check if the elements are in the viewport.
-			$(window).scroll(doCheck).resize(doCheck);
+			$(window).on('scroll', doCheck)
+			$(window).on('resize', doCheck);
 			doCheck();			
 		});
 	}
